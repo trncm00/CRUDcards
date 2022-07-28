@@ -1,0 +1,25 @@
+*{
+	padding:5px;
+	margin: 2px;
+}
+
+nav{
+
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+#display-card{
+	background-color: chartreuse;
+}
+
+#navbar-nav > li{
+ 
+}
+
+div{
+	display:inline-block;
+	
+}

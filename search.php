@@ -13,78 +13,74 @@
 </head>
 
 <body>
-<!--
-	<div >
-		<?php require_once('nav.php');?>
-	</div>
--->
-	
+	<?php
+	require_once('nav.php');
+	?>
 
-<div class="#">
-  <div class="#">
-	
-	
-<div class="jumbotron">
-  <h1 class="display-4">C.R.U.D Cards</h1>
-  <p class="lead">Create, Read, Update or Delete with Bootstrap, PHP and JSON</p>
-  <hr class="my-4">
-	<p></p>
-  <p>Make a general search card for a subject, and choose the search engine</p>
-  <p>Choose a URL from the search results and put it in a bookmark card, so you have that result forever.</p>
-  </div>
-  </div>
-  </div>
-	  
-	  <div class="container">
-	  <div class="row">
-		  
-<!--
-eloy helped me set up the container row situation 
-	I had multiple 
--->
-<!--injected php pages-->
-		  	<div class="float-left col-lg-6 bg-light"><?php require_once('search.php');?></div>
-	  
-	  	  	<div class="float-right col-lg-6 bg-light"><?php require_once('bookmark.php');?></div>
-
-	
-		  <div style="float:clear"></div>  
+	<div class="container">
+	<div class="row">
 		
 
-	
 
 
-	<div class="col-lg-6 bg-light"><?php require_once('searchLanding.php');?></div>
-	
-	
-		  
-		  <div class="col-lg-6 bg-light">
-		<?php require_once('bookmarkLanding.php');?></div>
+<!--search form-->
 
+		<form method="post" action="scardP.php" enctype="multipart/form-data">
+	<h1>Search Card Description</h1>
 		
-		  
-		  </div>
+			<label for="comment">Card description - will not go into search bar </label>
+		<input class="form-control" id="txtr" name="txtr" type="text">
+
+		<label>content name</label>
+		<input class="form-control" id="cnm" name="cnm" type="text" class="" >
+
+		<br>
+		
+
+		<label>content type</label>
+		<input class="form-control" id="ctp" name="ctp" type="text" class="" >
+
+		<br>
+
+		<label>content platform</label>
+		<input class="form-control" id="mtp" name="mtp" type="text"  class="">
+			
+		<label>search bar</label>
+		<input class="form-control" id="srch" name="srch" type="text" >
+	
+			
+			
+			
+	 <div class="form-group">
+    <label for="exampleFormControlSelect2" >Deck Type</label>
+    <select multiple class="form-control" name="selectVal" id="exampleFormControlSelect2">
+ 	<option name="Reddit">Reddit</option>
+    <option name="Wikipedia">Wikipedia</option>
+    <option name="Stackoverflow">StackOverflow</option>
+    <option name="Google Search">Google Search</option>
+    <option name="Youtube">YouTube</option>
+    <option name="DuckDuckGo">DuckDuckGo</option>
+    </select>
+  </div>
+
+		<input type="submit" value="submit" class="btn btn-primary">
+	</form>
+		
 		</div>
-	 
-
-
+	</div>
+	
+		
+	
 	
 	<!--	<p id='clickValue'></p>-->
 
 
 	<!-- Optional JavaScript -->
-<!-- this contains some js that I dont need anymore
+
 
 	<script>
 		
-		// I got in trouble because the return variables
-				//were wrapped in quotes, which made them classes?
 		
-		//the real problem though, was that I had.innerHtml
-		//as the final object property when it is value i am 
-			//looking for. InnerHtml is dealing with text fields
-			//value is dealing with input value, which I guess
-			//makes the name the key. I need to know 
 		
 		function loader() {
 			
@@ -111,10 +107,9 @@ eloy helped me set up the container row situation
 			document.getElementById('srch').value = loader();
 		};
 	</script>
--->
+
 	
 		
-
 
 
 
